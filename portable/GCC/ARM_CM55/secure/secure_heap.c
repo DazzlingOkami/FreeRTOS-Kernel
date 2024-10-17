@@ -29,6 +29,9 @@
 /* Standard includes. */
 #include <stdint.h>
 
+/* Configuration includes. */
+#include "FreeRTOSConfig.h"
+
 /* Secure context heap includes. */
 #include "secure_heap.h"
 
@@ -234,7 +237,7 @@ static void prvInsertBlockIntoFreeList( BlockLink_t * pxBlockToInsert )
         pxBlockToInsert->pxNextFreeBlock = pxIterator->pxNextFreeBlock;
     }
 
-    /* If the block being inserted plugged a gab, so was merged with the block
+    /* If the block being inserted plugged a gap, so was merged with the block
      * before and the block after, then it's pxNextFreeBlock pointer will have
      * already been set, and should not be set here as that would make it point
      * to itself. */

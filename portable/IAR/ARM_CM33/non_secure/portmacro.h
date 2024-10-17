@@ -50,12 +50,8 @@
  */
 #define portARCH_NAME                    "Cortex-M33"
 #define portHAS_ARMV8M_MAIN_EXTENSION    1
+#define portARMV8M_MINOR_VERSION         0
 #define portDONT_DISCARD                 __root
-/*-----------------------------------------------------------*/
-
-#if ( configTOTAL_MPU_REGIONS == 16 )
-    #error 16 MPU regions are not yet supported for this port.
-#endif
 /*-----------------------------------------------------------*/
 
 /* ARMv8-M common port configurations. */
